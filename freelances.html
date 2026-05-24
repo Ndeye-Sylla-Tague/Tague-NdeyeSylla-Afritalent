@@ -4,13 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent - Freelances</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cnd.jsdelivr.net/npm/boostrap@5.3.0/dist/css/boostrap.min.css">
 </head>
 <body>
 
-    <script src="https://cdn.jsdelivr.net/npm/boostrap@5.3.0/dist/js/boostrap.bundle.min.js"></script>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-primary ms-lg-3 fw-bold">Rejoindre AfriTalent</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br><br><br>
+<main>
+        
+        <section id="header-freelances">
+            <span>Communauté AfriTalent</span>
+            <h1>Nos Experts Disponibles</h1>
+            <p>Trouvez le talent idéal parmi les meilleurs profils de la sous-région pour propulser vos projets digitaux.</p>
+        </section>
+
+        <section id="search-bar">
+            <button>Catégories</button>
+            <input type="text" placeholder="Rechercher une compétence (ex: React, Figma, SEO...)">
+            <button>Rechercher</button>
+        </section>
+
+        <section id="freelance-list">
+            
+            <div class="freelance-card">
+                <img src="images/MouhamedDiop.jpg" alt="Moohamed Diop"><br>
+                <span>Disponible</span>
+                <h3>Mouhamed Diop </h3>
+                <p>Développeur Fullstack React/Node</p>
+                <p>Expert en création d'applications web modernes et évolutives.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>45.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+            <div class="freelance-card">
+                <img src="images/VeronicaMedy.jpg" alt="Veronica Medy"><br>
+                <span>Disponible</span>
+                <h3>Veronica Medy</h3>
+                <p>UI/UX Designer</p>
+                <p>Spécialiste Figma, je transforme vos idées en interfaces élégantes.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>35.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+            <div class="freelance-card">
+                <img src="images/LalaAicha.jpg" alt="Lala Aicha Thiam"><br>
+                <span>En mission</span>
+                <h3>Lala Aicha Thiam</h3>
+                <p>Expert Marketing Digital</p>
+                <p>Boostez votre visibilité et gérez vos campagnes Ads.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>50.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+            <div class="freelance-card">
+                <img src="images/FatouNdiaye.jpg" alt="Fatou Ndiaye"><br>
+                <span>Disponible</span>
+                <h3>Fatou Ndiaye</h3>
+                <p>Rédactrice Web / Copywriter</p>
+                <p>Rédaction SEO et storytelling percutant pour valoriser votre marque.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>25.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+            <div class="freelance-card">
+                <img src="images/IbrahimaSall.jpg" alt="Ibrahim Sall"><br>
+                <span>Disponible</span>
+                <h3>Ibrahim Sall</h3>
+                <div class="rating">
+                <p>Data Scientist</p>
+                <p>Analyse de données complexes et Machine Learning.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>60.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+            <div class="freelance-card">
+                <img src="images/AbdouDiouf.jpg" alt="Abdou Duouf"><br>
+                <span>Disponible</span>
+                <h3>Abdou Diouf</h3>
+                <p>Social Media Manager</p>
+                <p>Gestion d'audience et création de contenus viraux.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>30.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+            <div class="freelance-card">
+                <img src="images/OusmaneSy.jpg" alt="Ousmane Sy"><br>
+                <span>Disponible</span>
+                <h3>Ousmane Sy</h3>
+                <p>Monteur Vidéo / Motion Design</p>
+                <p>Montages dynamiques pour réseaux sociaux et TV.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>40.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+            <div class="freelance-card">
+                <img src="images/KhadyFall.jpg" alt="Khady Fall"><br>
+                <span>En mission</span>
+                <h3>Khady Fall</h3>
+                <p>Consultante Cybersécurité</p>
+                <p>Audits de sécurité et protection des infrastructures.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>75.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+            <div class="freelance-card">
+                <img src="images/MmadouBa.jpg" alt="Mamadou Ba"><br>
+                <span>Disponible</span>
+                <h3>Mamadou Ba</h3>
+                <p>Expert Shopify / WooCommerce</p>
+                <p>Création de boutiques e-commerce sécurisées.</p>
+                <div>
+                    <span>TARIF JOURNALIER</span>
+                    <span>35.000 FCFA</span>
+                    <a href="#">Voir profil</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+    <div id="footer-content">
+        
+        <div class="footer-section">
+            <h4>AfriTalent</h4>
+            <p>La plateforme de référence pour connecter les meilleurs talents freelances en Afrique avec des entreprises du monde entier.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h5>Plateforme</h5>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="freelances.html">Trouver un Freelance</a></li>
+                <li><a href="#">Offres d'Emploi</a></li>
+                <li><a href="#">Comment ça marche</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h5>Ressources</h5>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Centre d'aide</a></li>
+                <li><a href="#">Tutoriels</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h5>Contact</h5>
+            <ul>
+                <li> Avenue Cheikh Anta Diop, Dakar, Sénégal</li>
+                <li> contact@afritalent.sn</li>
+                <li> +221 33 800 00 00</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 AfriTalent. Tous droits réservés.</p>
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
 </html>
+
+
+
+
+
+

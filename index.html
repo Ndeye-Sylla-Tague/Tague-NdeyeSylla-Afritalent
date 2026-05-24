@@ -4,13 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent - Accueil</title>
-     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cnd.jsdelivr.net/npm/boostrap@5.3.0/dist/css/boostrap.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-    
-    <script src="https://cdn.jsdelivr.net/npm/boostrap@5.3.0/dist/js/boostrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+            <!-- Navbar -->
+    <header>
+        <br><br><br>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <a href="#" class="btn btn-primary ms-lg-3 fw-bold">Rejoindre AfriTalent</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+            <!-- Section Hero -->
+    <main>
+    <section id="hero">
+        <div>
+            <h1>L'excellence du freelancing africain</h1>
+            <div><h2>La plateforme qui connecte les entreprises aux meilleurs talents du continent pour des résultats exceptionnels. Connectez-vous avec des talents qualifiés pour vos projets technologiques et créatifs. Simple, rapide et sécurisé.</h2></div>
+            
+            <div>
+                <input type="text" placeholder="Ex: Développeur Web, UI/UX Designer...">
+                <button>Rechercher</button>
+            </div>
+
+            <div>
+                <a href="freelances.html">Je suis freelance</a>
+                <a href="#">Je cherche un freelanc</a>
+            </div>
+        </div>
+
+        <div>
+            <img src="images/deev.jpg" alt="Image de bienvenue AfriTalent">
+        </div>
+    </section>
+
+    <section id="stats">
+        <div>
+            <div>
+                <h2>+2 500</h2>
+                <p>FREELANCES</p>
+            </div>
+            <div>
+                <h2>+800</h2>
+                <p>ENTREPRISES</p>
+            </div>
+            <div>
+                <h2>+12 000</h2>
+                <p>MISSIONS REALISEES</p>
+            </div>
+        </div>
+    </section>
+            <!--Nos categories-->
+    <section id="services">
+        <div>
+            <h2>Nos catégories de services</h2>
+            <p>Explorez les talents experts par domaine d'activité.</p>
+        </div>
+
+        <div>
+            <div>
+                <h3>Développement Web</h3>
+                <p>Sites vitrines, e-commerce et applications sur mesure.</p>
+                <p>150 freelances</p>
+            </div>
+            <div>
+                <h3>Design UI/UX</h3>
+                <p>Interfaces modernes et expériences utilisateurs intuitives.</p>
+                <p>85 freelances</p>
+            </div>
+            <div>
+                <h3>Marketing Digital</h3>
+                <p>SEO, publicité en ligne et stratégie sur les réseaux sociaux.</p>
+                <p>120 freelances</p>
+            </div>
+            <div>
+                <h3>Data & IA</h3>
+                <p>Analyse de données, Machine Learning et automatisation.</p>
+                <p>40 freelances</p>
+            </div>
+            <div>
+                <h3>Rédaction Tech</h3>
+                <p>Documentation technique, articles de blog et livres blancs.</p>
+                <p>65 freelances</p>
+            </div>
+            <div>
+                <h3>DevOps & Cloud</h3>
+                <p>Infrastructure, déploiement continu et sécurité serveur.</p>
+                <p>30 freelances</p>
+            </div>
+        </div>
+    </section>
+            <!--Comment ça marche-->
+    <section id="how-it-works">
+        <h2>Comment ça marche ?</h2>
+        <div>
+            <div>
+                <div>01</div>
+                <h3>Créez votre profil en 2 minutes</h3>
+                <p>Que vous soyez un expert ou une entreprise, l'inscription est fluide.</p>
+            </div>
+            <div>
+                <div>02</div>
+                <h3>Explorez les opportunités</h3>
+                <p>Accédez à un catalogue mondial ou trouvez la mission qui correspond à votre talent.</p>
+            </div>
+            <div>
+                <div>03</div>
+                <h3>Échangez en direct</h3>
+                <p>Utilisez notre messagerie intégrée pour discuter des détails du projet.</p>
+            </div>
+            <div>
+                <div>04</div>
+                <h3>Travaillez et soyez payé</h3>
+                <p>La plateforme sécurise les transactions.</p>
+            </div>
+        </div>
+    </section>
+                <!--Temoins-->
+    <section id="testimonials">
+        <h2>Ce que disent nos clients</h2>
+        
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <img src="images/1.jpg" alt="Maimouna Ndiaye">
+                <h3>Maimouna Ndiaye</h3>
+                <p>CEO, Startup TechDakar</p>
+                <p>"Grâce à l'expertise d'AfriTalent, j'ai pu collaborer avec un développeur web exceptionnel basé à Dakar pour mon projet e-commerce."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/MalickFall.jpg" alt="Malick Fall">
+                <h3>Malick Fall</h3>
+                <p>Responsable RH, Innov'Africa</p>
+                <p>"AfriTalent a véritablement révolutionné notre manière de recruter des experts digitaux. Accéder à un vivier de talents africains est un atout stratégique."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/AwaSow.jpg" alt="Awa Sow">
+                <h3>Awa Sow</h3>
+                <p>Freelance UI/UX Designer</p>
+                <p>"En tant que designer partenaire, je constate chaque jour comment cette plateforme valorise les compétences locales."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/MoustaphaDiop.jpg" alt="Moustapha Diop">
+                <h3>Moustapha Diop</h3>
+                <p>Directeur Technique, FinancePlus</p>
+                <p>"La fluidité de la mise en relation et le suivi de projet sont tout simplement impressionnants."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/AmadouDiallo.jpg" alt="Amadou Diallo">
+                <h3>Amadou Diallo</h3>
+                <p>Chef de Projet, BuildAfrica</p>
+                <p>"La qualité des profils présents sur AfriTalent a dépassé toutes nos attentes initiales."</p>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="images/KhadydjaSy.jpg" alt="Khadija Sy">
+                <h3>Khadija Sy</h3>
+                <p>Responsable Digitale, Agence Vision</p>
+                <p>"Le professionnalisme et la réactivité des freelances que nous avons trouvés ici sont exemplaires."</p>
+            </div>
+        </div>
+    </section>
+            <!--CTA-->
+    <section id="cta">
+        <h2>Prêt à propulser votre carrière ?</h2>
+        <p>Inscrivez-vous aujourd'hui et rejoignez la plus grande communauté de freelances en Afrique.</p>
+        <a href="#">S'inscrire gratuitement</a>
+    </section>
+</main>
+            <!-- Foter-->
+    <footer>
+    <div id="footer-content">
+        
+        <div class="footer-section">
+            <h4>AfriTalent</h4>
+            <p>La plateforme de référence pour connecter les meilleurs talents freelances en Afrique avec des entreprises du monde entier.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h5>Plateforme</h5>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="freelances.html">Trouver un Freelance</a></li>
+                <li><a href="#">Offres d'Emploi</a></li>
+                <li><a href="#">Comment ça marche</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h5>Ressources</h5>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Centre d'aide</a></li>
+                <li><a href="#">Tutoriels</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h5>Contact</h5>
+            <ul>
+                <li> Avenue Cheikh Anta Diop, Dakar, Sénégal</li>
+                <li> contact@afritalent.sn</li>
+                <li> +221 33 800 00 00</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 AfriTalent. Tous droits réservés.</p>
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="js/main.js"></script>  
 
 </body>
 </html>
