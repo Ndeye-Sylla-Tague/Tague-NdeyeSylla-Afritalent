@@ -6,20 +6,23 @@
     <title>AfriTalent - Accueil</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
             <!-- Navbar -->
     <header>
-        <br><br><br>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand fw-bold" href="index.html">AfriTalent</a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <nav class="navbar navbar-expand-lg  fixed-top">
+           <div class="container">
+           <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/africa.png" alt="AfriTalent Logo" class="brand-logo-img">
+                <span style="font-weight: 800; ">AfriTalent</span>
+            </a>
+                        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -49,7 +52,7 @@
 
             <div>
                 <a href="freelances.html">Je suis freelance</a>
-                <a href="#">Je cherche un freelanc</a>
+                <a href="freelances.html">Je cherche un freelanc</a>
             </div>
         </div>
 
@@ -141,53 +144,53 @@
         </div>
     </section>
                 <!--Temoins-->
-    <section id="testimonials">
-        <h2>Ce que disent nos clients</h2>
-        
-        <div class="testimonial-container">
-            <div class="testimonial-card">
-                <img src="images/1.jpg" alt="Maimouna Ndiaye">
-                <h3>Maimouna Ndiaye</h3>
-                <p>CEO, Startup TechDakar</p>
-                <p>"Grâce à l'expertise d'AfriTalent, j'ai pu collaborer avec un développeur web exceptionnel basé à Dakar pour mon projet e-commerce."</p>
-            </div>
-
-            <div class="testimonial-card">
-                <img src="images/MalickFall.jpg" alt="Malick Fall">
-                <h3>Malick Fall</h3>
-                <p>Responsable RH, Innov'Africa</p>
-                <p>"AfriTalent a véritablement révolutionné notre manière de recruter des experts digitaux. Accéder à un vivier de talents africains est un atout stratégique."</p>
-            </div>
-
-            <div class="testimonial-card">
-                <img src="images/AwaSow.jpg" alt="Awa Sow">
-                <h3>Awa Sow</h3>
-                <p>Freelance UI/UX Designer</p>
-                <p>"En tant que designer partenaire, je constate chaque jour comment cette plateforme valorise les compétences locales."</p>
-            </div>
-
-            <div class="testimonial-card">
-                <img src="images/MoustaphaDiop.jpg" alt="Moustapha Diop">
-                <h3>Moustapha Diop</h3>
-                <p>Directeur Technique, FinancePlus</p>
-                <p>"La fluidité de la mise en relation et le suivi de projet sont tout simplement impressionnants."</p>
-            </div>
-
-            <div class="testimonial-card">
-                <img src="images/AmadouDiallo.jpg" alt="Amadou Diallo">
-                <h3>Amadou Diallo</h3>
-                <p>Chef de Projet, BuildAfrica</p>
-                <p>"La qualité des profils présents sur AfriTalent a dépassé toutes nos attentes initiales."</p>
-            </div>
-
-            <div class="testimonial-card">
-                <img src="images/KhadydjaSy.jpg" alt="Khadija Sy">
-                <h3>Khadija Sy</h3>
-                <p>Responsable Digitale, Agence Vision</p>
-                <p>"Le professionnalisme et la réactivité des freelances que nous avons trouvés ici sont exemplaires."</p>
-            </div>
+   <section id="testimonials">
+    <h2>Ce que disent nos clients</h2>
+    
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <div class="img-container"><img src="images/MaimounaNdiaye.jpg" alt="Maimouna Ndiaye"></div>
+            <h3>Maimouna Ndiaye</h3>
+            <p>CEO, Startup TechDakar</p>
+            <p>"Grâce à l'expertise d'AfriTalent, j'ai pu collaborer avec un développeur web exceptionnel basé à Dakar pour mon projet e-commerce."</p>
         </div>
-    </section>
+
+        <div class="testimonial-card">
+            <div class="img-container"><img src="images/MalickFall.jpg" alt="Malick Fall"></div>
+            <h3>Malick Fall</h3>
+            <p>Responsable RH, Innov'Africa</p>
+            <p>"AfriTalent a véritablement révolutionné notre manière de recruter des experts digitaux. Accéder à un vivier de talents africains est un atout stratégique."</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="img-container"><img src="images/AwaSow.jpg" alt="Awa Sow"></div>
+            <h3>Awa Sow</h3>
+            <p>Freelance UI/UX Designer</p>
+            <p>"En tant que designer partenaire, je constate chaque jour comment cette plateforme valorise les compétences locales."</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="img-container"><img src="images/MoustaphaDiop.jpg" alt="Moustapha Diop"></div>
+            <h3>Moustapha Diop</h3>
+            <p>Directeur Technique, FinancePlus</p>
+            <p>"La fluidité de la mise en relation et le suivi de projet sont tout simplement impressionnants."</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="img-container"><img src="images/AmadouDiallo.jpg" alt="Amadou Diallo"></div>
+            <h3>Amadou Diallo</h3>
+            <p>Chef de Projet, BuildAfrica</p>
+            <p>"La qualité des profils présents sur AfriTalent a dépassé toutes nos attentes initiales."</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="img-container"><img src="images/KhadydjaSy.jpg" alt="Khadija Sy"></div>
+            <h3>Khadija Sy</h3>
+            <p>Responsable Digitale, Agence Vision</p>
+            <p>"Le professionnalisme et la réactivité des freelances que nous avons trouvés ici sont exemplaires."</p>
+        </div>
+    </div>
+</section>
             <!--CTA-->
     <section id="cta">
         <h2>Prêt à propulser votre carrière ?</h2>

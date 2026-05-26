@@ -1,0 +1,125 @@
+/* --- 1. VARIABLES CSS (Configuration globale) --- */
+:root {
+    --color-primary: #443072;    /* Indigo profond pour les titres */
+    --color-secondary: #9937ef;  /* Violet vif pour l'action */
+    --color-accent: #dccdf7;     /* Mauve clair pour les fonds */
+    --color-bg: #eceaf1;         /* Fond général du site */
+    --color-text: #1a1a1a;       /* Texte sombre */
+    --rayon-bordure: 20px;       /* Arrondi des éléments */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* --- 2. RESET CSS (Normalisation) --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 3. STYLES DE BASE --- */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden; /*Ça évite les débordements horizontaux*/
+}
+
+/* --- 4. TYPOGRAPHIE --- */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* --- 5. NAVBAR --- */
+.navbar {
+    background-color:white;
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 30px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary) !important;
+    display: flex; /* Aligne le logo et le texte */
+    align-items: center;
+}
+
+/* --- 6. LOGO MAUVET (Technique du masque) --- */
+.brand-logo-img {
+    /* Dimensions et affichage requis pour le masque */
+    display: inline-block; 
+    width: 40px !important;
+    height: 40px !important;
+    
+    /* Couleur du logo (utilise la variable violette) */
+    background-color: var(--color-secodary);
+    
+    /* Découpe le fond violet selon la forme du SVG */
+    -webkit-mask-image: url('../images/africa.svg');
+    mask-image: url('../images/africa.svg');
+    
+    /* Paramètres du masque pour éviter les répétitions */
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    
+    /* S'assure qu'aucun filtre par défaut ne s'applique */
+    filter: none;
+}
+
+/* --- 7. NAVIGATION & BOUTONS --- */
+.navbar-nav .nav-link {
+    color: var(--color-text) !important;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary) !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: var(--rayon-bordure) !important;
+    font-weight: 600;
+}
+
+/* --- 8. SECTION & CONTENU --- */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.card-section {
+    background-color: var(--color-accent);
+    padding: 30px;
+    border-radius: var(--rayon-bordure);
+    margin-bottom: 20px;
+}
+
+/* --- 9. IMAGES --- */
+img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.img-container img {
+    border-radius: var(--rayon-bordure);
+}
+
+.hero{
+    min-height: 80vh; /*centrer verticalement le contenu*/
+}
+/* --- 10. FOOTER --- */
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+     
+}
