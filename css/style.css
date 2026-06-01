@@ -2,7 +2,7 @@
 :root {
     --color-primary: #443072;    /* Indigo profond pour les titres */
     --color-secondary: #9937ef;  /* Violet vif pour l'action */
-    --color-accent: #dccdf7;     /* Mauve clair pour les fonds */
+    --color-accent: #cfbbf5;     /* Mauve clair pour les fonds */
     --color-bg: #eceaf1;         /* Fond général du site */
     --color-text: #1a1a1a;       /* Texte sombre */
     --rayon-bordure: 20px;       /* Arrondi des éléments */
@@ -27,12 +27,23 @@ body {
 }
 
 /* --- 4. TYPOGRAPHIE --- */
-h1, h2, h3 {
+ h2, h3 {
     font-family: var(--font-heading);
     color: var(--color-primary);
     margin-bottom: 1rem;
 }
+h1.display-2 {
+    font-family: var(--font-heading);
+    font-size: 4rem !important; /* On augmente un peu la taille pour plus d'impact */
+    line-height: 1.1;           /* Plus c'est grand, plus l'interligne doit être serré */
+    letter-spacing: -0.02em;    /* Un léger resserrement rend le titre plus "ancré" */
+    color: var(--color-primary);
+}
 
+h2 {
+    font-weight: 700;
+    text-transform: capitalize; /* Donne un aspect plus structuré */
+}
 /* --- 5. NAVBAR --- */
 .navbar {
     background-color:white;
@@ -56,7 +67,7 @@ h1, h2, h3 {
     height: 40px !important;
     
     /* Couleur du logo (utilise la variable violette) */
-    background-color: var(--color-secodary);
+    background-color: var(--color-secondary);
     
     /* Découpe le fond violet selon la forme du SVG */
     -webkit-mask-image: url('../images/africa.svg');
@@ -78,7 +89,12 @@ h1, h2, h3 {
     font-weight: 500;
     margin-left: 10px;
 }
-
+/* Style appliqué à l'élément de navigation actif */
+.navbar-nav .nav-link.active {
+    color: var(--color-secondary) !important;
+    font-weight: 800 !important;
+    border-bottom: 2px solid var(--color-secondary); /* Un petit soulignement élégant */
+}
 .btn-primary {
     background-color: var(--color-secondary) !important;
     border: none !important;
@@ -86,7 +102,46 @@ h1, h2, h3 {
     border-radius: var(--rayon-bordure) !important;
     font-weight: 600;
 }
+/* Style de base pour les boutons AfriTalent */
+.btn-afri {
+    padding: 12px 30px;
+    border-radius: var(--rayon-bordure);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
 
+/* Bouton "Je cherche un freelance" (Plein) */
+.btn-afri-primary {
+    background-color: var(--color-secondary);
+    color: white;
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-afri-primary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+/* Bouton "Je suis freelance" (Contour) */
+.btn-afri-outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-afri-outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-3px);
+}
+@media (max-width: 576px) {
+    .d-flex.gap-3 {
+        flex-direction: column;
+    }
+}
 /* --- 8. SECTION & CONTENU --- */
 main {
     max-width: 1200px;
@@ -116,10 +171,313 @@ img {
     min-height: 80vh; /*centrer verticalement le contenu*/
 }
 /* --- 10. FOOTER --- */
-footer {
-    background-color: var(--color-primary);
-    color: white;
-    text-align: center;
+
+/* --- AJOUTS POUR COMMIT 4 --- */
+
+/* 1. Hero Asymétrique */
+#hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+.hero img {
+    max-width: 100%; /* L'image s'adapte à la taille de sa colonne */
+    width: 100%;     /* Force l'image à prendre toute la largeur disponible */
+    height: auto;
+    object-fit: cover; /* Maintient les proportions */
+}
+
+/* L'image reste droite en permanence */
+.tilt-image {
+    transform: rotate(0deg); /* On force la rotation à 0 */
+    transition: transform 0.4s ease;
+    border-radius: var(--rayon-bordure);
+}
+
+/* Optionnel : Si tu veux garder un petit effet, on peut mettre un zoom au survol */
+.tilt-image:hover {
+    transform: scale(1.03); /* L'image s'agrandit légèrement au lieu de pivoter */
+}
+
+/* Typographie expressive */
+h1.display-2 {
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+    color: var(--color-primary);
+}
+
+/* Container de la grille */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style de chaque carte */
+.bento-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--rayon-bordure);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol (Exigence du commit 4) */
+.bento-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--color-secondary);
+}
+
+.bento-card i {
+    color: var(--color-secondary);
+    display: block;
+}
+.freelance-count {
+    font-weight: 600;
+    color: var(--color-secondary);
+    display: block;
+    margin-top: 15px;
+}
+/*comment ca marche*/
+.bento-grid-steps {
+    display: grid;
+    /* On crée une grille flexible */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.step-card {
+    background: white;
+    padding: 30px;
+    border-radius: var(--rayon-bordure);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+/* On donne de l'espace aux cartes "large" pour l'asymétrie */
+.step-large {
+    grid-column: span 2; /* Prend deux colonnes au lieu d'une */
+    background-color: var(--color-accent); /* Une couleur légèrement différente pour varier */
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary); /* Ton indigo */
+    opacity: 0.3; /* Effet de style léger */
+    margin-bottom: 10px;
+}
+
+.step-card:hover {
+    transform: scale(1.02); /* Petit zoom dynamique */
+    border-color: var(--color-secondary);
+}
+
+/* Ajustement responsive : si l'écran est petit, tout devient colonne simple */
+@media (max-width: 768px) {
+    .step-large {
+        grid-column: span 1;
+    }
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-card {
+    background: white;
     padding: 40px 20px;
-     
+    border-radius: var(--rayon-bordure);
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+/* Style des icônes dans les étapes */
+.step-card i {
+    display: block;
+    margin-bottom: 15px;
+    color: var(--color-secondary); /* Utilisation de ta couleur secondaire */
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol sur l'icône */
+.step-card:hover i {
+    transform: scale(1.1); /* L'icône grossit légèrement au survol */
+}
+/* 1. On donne au conteneur parent une position relative */
+.step-card {
+    position: relative; /* Indispensable pour que l'icône se place par rapport à la carte */
+    /* ... tes autres styles existants (taille, background, etc.) restent inchangés ... */
+}
+
+/* 2. On positionne l'icône tout à droite */
+.step-card i {
+    position: absolute;
+    top: 20px;   /* Distance depuis le haut */
+    right: 20px; /* Distance depuis la droite */
+}
+
+/* 3. On s'assure que le numéro ne bouge pas */
+.step-number {
+    display: block;
+    margin-bottom: 10px;
+    /* ... garde tes styles actuels pour .step-number ... */
+}
+/* Container de la carte témoignage */
+/* Container de la carte témoignage */
+.testimonial-card {
+    text-align: center;
+    padding: 40px;
+    background: #ffffff; /* Fond blanc pur */
+    border-radius: 24px; /* Plus arrondi pour un look moderne */
+    margin: 40px auto; /* Plus d'espace autour */
+    max-width: 600px;
+    /* Une ombre très légère pour donner de la profondeur */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+    border: 1px solid rgba(0, 0, 0, 0.03); /* Bordure très fine presque invisible */
+}
+
+/* Image arrondie stylisée */
+/* Style des images des témoins (plus grandes) */
+.testimonial-card img {
+    width: 150px;       /* Augmenté de 80px à 150px */
+    height: 150px;      /* Augmenté de 80px à 150px */
+    border-radius: 50%; /* Garde la forme circulaire */
+    margin-bottom: 25px; /* Un peu plus d'espace sous l'image */
+    object-fit: cover;  /* Assure que l'image remplit bien le cercle sans être déformée */
+    border: 4px solid var(--color-accent); /* Contour légèrement plus épais */
+    display: block;      /* Centre l'image dans le flux */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Titre du témoignage */
+.testimonial-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+/* Rôle professionnel */
+.testimonial-card .role {
+    font-size: 0.95rem;
+    color: var(--color-secondary);
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+/* Style du bloc étoiles */
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 15px;
+}
+
+/* Couleur des étoiles */
+.text-warning {
+    color: #ffc107 !important;
+}
+/* Citation avec une typographie plus aérée */
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6; /* Améliore le confort de lecture */
+    color: #555;
+}
+
+/* Rend les flèches noires pour être visibles sur fond blanc */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Ajoute un petit effet au survol des flèches */
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+.cta-section {
+    background-color: var(--color-primary); /* Ton Indigo profond */
+    color: white;
+    padding: 60px 0;
+    border-radius: var(--rayon-bordure); /* Arrondi pour rester cohérent */
+    margin: 40px 0;
+}
+
+/* Style spécifique pour le titre */
+.cta-title {
+    font-family: var(--font-heading);
+    color: white; /* Assure que le titre est bien blanc */
+    margin-bottom: 10px; /* Espace entre le titre et le paragraphe */
+}
+
+.cta-section .lead {
+    font-family: var(--font-body);
+    opacity: 0.9;
+    margin-bottom: 30px !important;
+}
+
+/* Style du bouton personnalisé */
+.btn-custom {
+    display: inline-block;
+    background-color: white;
+    color: var(--color-primary);
+    padding: 15px 40px;
+    border-radius: 50px; /* Bouton très arrondi */
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--color-secondary); /* Devient violet au survol */
+    color: white;
+    transform: scale(1.05); /* Petit effet de zoom */
+}
+.footer-section {
+    background-color: var(--color-primary); /* Ton Indigo */
+    color: white;
+    border-top-left-radius: var(--rayon-bordure);
+    border-top-right-radius: var(--rayon-bordure);
+    margin-top: 50px;
+}
+
+.footer-section h4, .footer-section h5 {
+    font-family: var(--font-heading);
+    color: white;
+}
+
+.footer-section a {
+    color: #d1d1d1; /* Gris clair pour le texte inactif */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white; /* Blanc au survol */
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+.social-icons a {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px); /* Petit effet de rebond au survol */
+    opacity: 0.8;
 }
