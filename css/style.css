@@ -1,7 +1,7 @@
 /* --- 1. VARIABLES CSS (Configuration globale) --- */
 :root {
     --color-primary: #443072;    /* Indigo profond pour les titres */
-    --color-secondary: #9937ef;  /* Violet vif pour l'action */
+    --color-secondary:#943de5;  /* Violet vif pour l'action */
     --color-accent: #cfbbf5;     /* Mauve clair pour les fonds */
     --color-bg: #eceaf1;         /* Fond général du site */
     --color-text: #1a1a1a;       /* Texte sombre */
@@ -170,8 +170,6 @@ img {
 .hero{
     min-height: 80vh; /*centrer verticalement le contenu*/
 }
-/* --- 10. FOOTER --- */
-
 /* --- AJOUTS POUR COMMIT 4 --- */
 
 /* 1. Hero Asymétrique */
@@ -195,7 +193,7 @@ img {
     border-radius: var(--rayon-bordure);
 }
 
-/* Optionnel : Si tu veux garder un petit effet, on peut mettre un zoom au survol */
+/* mettre un zoom au survol */
 .tilt-image:hover {
     transform: scale(1.03); /* L'image s'agrandit légèrement au lieu de pivoter */
 }
@@ -214,7 +212,7 @@ h1.display-2 {
     gap: 20px;
     padding: 20px;
 }
-
+/*NOS CATEGORIES DE SERVICES*/
 /* Style de chaque carte */
 .bento-card {
     background-color: white;
@@ -237,7 +235,7 @@ h1.display-2 {
 }
 .freelance-count {
     font-weight: 600;
-    color: var(--color-secondary);
+    color: var(--color-secondary);  
     display: block;
     margin-top: 15px;
 }
@@ -301,7 +299,7 @@ h1.display-2 {
 .step-card i {
     display: block;
     margin-bottom: 15px;
-    color: var(--color-secondary); /* Utilisation de ta couleur secondaire */
+    color: var(--color-secondary); /* Utilisation de ma couleur secondaire */
     transition: transform 0.3s ease;
 }
 
@@ -480,4 +478,146 @@ h1.display-2 {
 .social-icons a:hover {
     transform: translateY(-5px); /* Petit effet de rebond au survol */
     opacity: 0.8;
+}
+
+/* Freelance.html */
+.freelance-card img {
+    width: 100%;           /* L'image prend toute la largeur de la carte */
+    height: 200px;         /* Hauteur fixe pour tout le monde */
+    object-fit: cover;     /* La photo est recadrée proprement pour remplir l'espace */
+    object-position: center; /* Centre la mise au point sur l'image */
+}
+/* Taris.html*/
+/* applique la couleur Indigo aux textes */
+.text-afri, .text-primary { 
+    color: var(--color-primary) !important; 
+}
+/* Pour s'assurer que les cartes ont bien les bordures arrondies */
+.rounded-4 {
+    border-radius: 20px !important;
+}
+
+/* Ajustement pour que l'en-tête bleu soit bien intégré */
+.card {
+    border-radius: 20px !important;
+}
+/* Applique la couleur Violet aux boutons pleins */
+.btn-primary, .btn-afri-custom { 
+    background-color: var(--color-secondary) !important; 
+    border-color: var(--color-secondary) !important; 
+    color: white !important;
+}
+
+/* Applique les couleurs aux boutons "outline" */
+.btn-outline-primary { 
+    color: var(--color-primary) !important; 
+    border-color: var(--color-primary) !important; 
+}
+.btn-outline-primary:hover { 
+    background-color: var(--color-primary) !important; 
+    color: white !important; 
+}
+
+/* Applique la couleur aux bordures */
+.border-primary, .border-afri { 
+    border-color: var(--color-primary) !important; 
+}
+
+/* Harmonisation des icônes de liste */
+.bi-check, .bi-check-circle-fill { 
+    color: var(--color-secondary) !important; 
+}
+
+/* Harmonisation de l'accordéon */
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-accent) !important;
+    color: var(--color-primary) !important;
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem var(--color-accent) !important;
+}
+/* 1. Pour les tablettes (écrans de 768px et plus) */
+@media (min-width: 768px) {
+    /* Exemple : réduire un peu la taille des titres pour tablette */
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* 2. Pour les ordinateurs (écrans de 992px et plus) */
+@media (min-width: 992px) {
+    /* Exemple : ajouter plus de marges sur les côtés du contenu */
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* 3. Pour les petits écrans / mobiles (moins de 768px) */
+@media (max-width: 767px) {
+    /* Exemple : forcer le texte à être centré sur mobile */
+    .text-afri {
+        text-align: center;
+    }
+    
+    /* Réduire l'espacement sur mobile pour ne pas perdre de place */
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+/*"J'ai utilisé des media queries dans mon fichier style.css pour compléter le système de grille de Bootstrap.
+ Cela me permet de personnaliser
+ le comportement de certains éléments spécifiques (marges, tailles de texte) 
+ pour garantir une expérience utilisateur parfaite sur tous les types d'écrans."*/
+ /* --- CORRECTION POUR LE FOND DES CARTES --- */
+
+/* Classe pour l'en-tête bleu/violet de la carte Business */
+.bg-afri-secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+/* Classe pour la bordure indigo */
+.border-afri-primary {
+    border: 2px solid var(--color-primary) !important;
+}
+
+/* Classe pour le bouton de la carte Business */
+.btn-afri-fill {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    color: white !important;
+}
+/* --- COMPOSANTS SECTION POURQUOI CHOISIR --- */
+.section-title { color: var(--color-primary); }
+.text-accent { color: var(--color-secondary); }
+
+.feature-card {
+    padding: 2rem;
+    border-radius: var(--rayon-bordure);
+    background-color: #f8f9fa;
+    transition: 0.3s;
+}
+.feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.feature-card i { color: var(--color-primary); margin-bottom: 1rem; display: block; }
+.feature-card h4 { font-weight: bold; margin-bottom: 0.5rem; }
+
+/* Bento Grid Statistiques */
+.stat-card-primary { background-color: var(--color-primary); color: white; padding: 3rem; border-radius: var(--rayon-bordure); height: 100%; text-align: center; }
+.stat-card-secondary { background-color: var(--color-secondary); color: white; padding: 3rem; border-radius: var(--rayon-bordure); height: 100%; text-align: center; }
+.stat-card-dark { background-color: #212529; color: white; padding: 3rem; border-radius: var(--rayon-bordure); height: 100%; text-align: center; }
+.stat-card-light { background-color: #ffffff; border: 1px solid #dee2e6; padding: 3rem; border-radius: var(--rayon-bordure); height: 100%; text-align: center; color: var(--color-primary); }
+
+/* CTA Rejoignez l'aventure */
+.cta-join-adventure {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 4rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+.cta-join-adventure h2 { color: white !important; font-weight: bold; }
+/* Chiffres en blanc forcé */
+.text-white-force {
+    color: white !important;
+    font-weight: bold;
 }
