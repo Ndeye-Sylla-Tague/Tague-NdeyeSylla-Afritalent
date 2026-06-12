@@ -1,13 +1,264 @@
 /* --- 1. VARIABLES CSS (Configuration globale) --- */
 :root {
     --color-primary: #443072;    /* Indigo profond pour les titres */
-    --color-secondary:#943de5;  /* Violet vif pour l'action */
+    --color-secondary: #943de5;  /* Violet vif pour l'action */
     --color-accent: #cfbbf5;     /* Mauve clair pour les fonds */
     --color-bg: #eceaf1;         /* Fond général du site */
     --color-text: #1a1a1a;       /* Texte sombre */
     --rayon-bordure: 20px;       /* Arrondi des éléments */
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+}
+
+/* --- AJOUT POUR LE DARK MODE (À mettre après ton :root actuel) --- */
+
+/* Thème Sombre */
+body.dark-mode {
+    --color-primary: #cfbbf5;   /* Plus clair pour contraster sur fond sombre */
+    --color-secondary: #b873ff;
+    --color-accent: #2d2640;    /* Sombre et discret */
+    --color-bg: #1d0f20;        /* Fond noir/gris très foncé */
+    --color-text: #eceaf1;      /* Texte clair */
+}
+/* --- MISE À JOUR DU BODY POUR LA TRANSITION --- */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* Ajoute cette ligne pour une transition fluide quand tu bascules le mode */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+/* 1. Navbar : Adaptation intelligente */
+body.dark-mode .navbar {
+    background-color: var(--color-bg) !important;
+}
+
+/* 2. Cartes : Adaptation sans forcer les couleurs internes */
+body.dark-mode .bento-card, 
+body.dark-mode .step-card,
+body.dark-mode .card {
+    background-color: #1e1e1e !important; /* Fond sombre pour les cartes */
+    border: 1px solid #333 !important;
+}
+
+/* 3. Texte dans les cartes : on ne touche qu'aux titres et paragraphes */
+body.dark-mode .bento-card h3,
+body.dark-mode .bento-card p,
+body.dark-mode .card-text {
+    color: var(--color-text) !important; /* Utilise la variable dark-mode définie dans ton :root */
+}
+
+/* 4. Lien actif : On protège le mauve peu importe le mode */
+.navbar-nav .nav-link.active {
+    color: var(--color-secondary) !important;
+    border-bottom: 2px solid var(--color-secondary);
+}
+/* Ciblage spécifique des chiffres dans les cartes de statistiques */
+body.dark-mode .stat-card,
+body.dark-mode .stat-card-light,
+body.dark-mode .bento-card {
+    background-color: #1e1e1e !important; /* Fond sombre */
+    border: 1px solid #333 !important;
+}
+
+/* On force la couleur des chiffres et du texte à l'intérieur */
+body.dark-mode .stat-card h2,
+body.dark-mode .stat-card h3,
+body.dark-mode .stat-card span,
+body.dark-mode .stat-card p {
+    color: #ffffff !important; 
+}
+/* --- Adaptation des témoignages pour le mode sombre --- */
+/* --- Correction pour le Dark Mode : Cible bien la classe .testimonial-card --- */
+body.dark-mode .testimonial-card {
+    background-color: #1e1e1e !important; 
+    border: 1px solid #333 !important;
+    padding: 20px; /* Ajoute un peu d'espace si besoin */
+    border-radius: 10px;
+}
+
+/* On force le texte à être blanc à l'intérieur de la carte */
+body.dark-mode .testimonial-card h3, 
+body.dark-mode .testimonial-card p, 
+body.dark-mode .testimonial-card .role {
+    color: #ffffff !important;
+}
+
+/* Correction pour le bouton CTA qui est juste après */
+body.dark-mode .cta-section {
+    background-color: #121212 !important;
+}
+
+body.dark-mode .cta-title {
+    color: #ffffff !important;
+}
+/* --- Correction du Hero de la page Freelances --- */
+body.dark-mode #header-freelances {
+    background-color: #121212 !important; /* Force le noir */
+}
+
+/* On cible les textes pour qu'ils deviennent blancs */
+body.dark-mode #header-freelances h1,
+body.dark-mode #header-freelances p,
+body.dark-mode #header-freelances span {
+    color: #ffffff !important;
+}
+
+/* Si tu veux que le texte "Communauté AfriTalent" reste mauve pour le style */
+body.dark-mode #header-freelances .text-primary {
+    color: var(--color-secondary) !important; 
+}
+/* --- Correction de la section FAQ pour le mode sombre --- */
+
+/* 1. Fond de la section */
+body.dark-mode .bg-white {
+    background-color: #121212 !important;
+}
+
+/* 2. Accordéon (les éléments de la liste) */
+body.dark-mode .accordion-item {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+}
+
+/* 3. Boutons de l'accordéon */
+body.dark-mode .accordion-button {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+/* 4. Texte à l'intérieur de l'accordéon */
+body.dark-mode .accordion-body, 
+body.dark-mode .accordion-body strong {
+    color: #cccccc !important; /* Un gris clair pour la lisibilité */
+}
+
+/* 5. Titres de la section */
+body.dark-mode h2, 
+body.dark-mode p {
+    color: #ffffff !important;
+}
+/* --- Correction des cartes de tarifs en mode sombre --- */
+
+/* 1. Fond des cartes */
+body.dark-mode .card {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+}
+
+/* 2. Titres des tarifs (Gratuité, BUSINESS, Entreprise) */
+body.dark-mode .card h5,
+body.dark-mode .card h2,
+body.dark-mode .card p {
+    color: #ffffff !important;
+}
+
+/* 3. Texte gris (prix, sous-titres) */
+body.dark-mode .card .text-muted {
+    color: #b3b3b3 !important;
+}
+
+/* 4. Correction du footer de la carte Business qui reste blanc */
+body.dark-mode .card-footer {
+    background-color: #1e1e1e !important;
+    border: none !important;
+}
+/* --- Correction des cartes "Pourquoi choisir" en mode sombre --- */
+
+/* 1. Fond de la section */
+body.dark-mode section.py-5.bg-white {
+    background-color: #121212 !important;
+}
+
+/* 2. Fond des cartes feature-card */
+body.dark-mode .feature-card {
+    background-color: #1e1e1e !important;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #333 !important;
+}
+
+/* 3. Textes à l'intérieur des cartes */
+body.dark-mode .feature-card h4, 
+body.dark-mode .feature-card p {
+    color: #ffffff !important;
+}
+
+/* 4. Titre de la section */
+body.dark-mode .section-main-title {
+    color: #ffffff !important;
+}
+
+body.dark-mode .section-description {
+    color: #cccccc !important;
+}
+/* --- Correction de la section Valeurs Fondamentales --- */
+
+/* 1. Fond de la section (remplace le gris clair bg-light) */
+body.dark-mode section.bg-light {
+    background-color: #121212 !important;
+}
+
+/* 2. Fond des cartes de valeurs */
+body.dark-mode .card {
+    background-color: #1e1e1e !important;
+}
+
+/* 3. Textes des cartes */
+body.dark-mode .card h5 {
+    color: #ffffff !important;
+}
+
+body.dark-mode .card .text-muted {
+    color: #b3b3b3 !important; /* Gris clair pour rester lisible */
+}
+
+/* 4. Titre de la section */
+body.dark-mode h3 {
+    color: #ffffff !important;
+}
+/* --- Mode Sombre avec ta couleur #1d0f20 --- */
+
+/* 1. Fond général de la page */
+body.dark-mode, 
+body.dark-mode main {
+    background-color: #1d0f20 !important;
+}
+
+/* 2. Fond des cartes (un peu plus clair pour créer du contraste) */
+body.dark-mode .card,
+body.dark-mode section.bg-light,
+body.dark-mode section.bg-white {
+    background-color: #2d1832 !important; /* Une version légèrement éclaircie de ton violet */
+    color: #ffffff !important;
+}
+
+/* 3. Ajustement des textes dans les cartes */
+body.dark-mode .card h3,
+body.dark-mode .card h4,
+body.dark-mode .card h5,
+body.dark-mode .card p {
+    color: #ffffff !important;
+}
+
+/* 4. Champs de formulaire (plus sombres pour rester dans le thème) */
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #3d2542 !important;
+    border: 1px solid #5a3a60 !important;
+    color: #ffffff !important;
+}
+
+/* 5. Labels (en gris clair pour ne pas fatiguer les yeux) */
+body.dark-mode label {
+    color: #d1b3d8 !important;
+}
+.card {
+    background-color: var(--color-bg); /* S'adapte automatiquement au mode sombre */
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
 }
 
 /* --- 2. RESET CSS (Normalisation) --- */
@@ -620,4 +871,62 @@ h1.display-2 {
 .text-white-force {
     color: white !important;
     font-weight: bold;
+}
+/* Empêche le flash blanc au chargement en mode sombre */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Navbar par défaut (tes styles actuels) */
+.navbar {
+    transition: all 0.3s ease; /* Rend le changement fluide */
+    padding: 20px 0; /* Un peu plus grand au départ */
+}
+
+/* Classe qui sera ajoutée par JS au scroll */
+.navbar.scrolled {
+    padding: 10px 0; /* Effet "shrink" (rétrécissement) */
+    background-color: #1d0f20 !important; /* Ta couleur sombre */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ajout de l'ombre */
+}
+/* 1. Couleur des liens en MODE CLAIR (par défaut) */
+.navbar .nav-link {
+    color: #333333 !important; /* Couleur sombre pour fond clair */
+    transition: color 0.3s ease;
+}
+
+/* 2. Couleur des liens en MODE SOMBRE */
+body.dark-mode .navbar .nav-link {
+    color: #ffffff !important; /* Couleur blanche pour fond sombre */
+}
+
+/* 3. Ajustement pour la Navbar Scrolled (quand elle est violette) */
+.navbar.scrolled .nav-link {
+    color: #ffffff !important; /* Toujours blanc sur fond violet */
+}
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Caché par défaut */
+    z-index: 9999;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#back-to-top.show {
+    display: block; /* Affiché quand on ajoute la classe 'show' */
+}
+#back-to-top {
+    /* ... tes propriétés existantes ... */
+    
+    /* Ajoute ces lignes pour centrer parfaitement */
+    display: flex !important;      /* Active Flexbox */
+    justify-content: center;      /* Centre horizontalement */
+    align-items: center;          /* Centre verticalement */
+    text-decoration: none;        /* Enlève le soulignement du lien */
 }
