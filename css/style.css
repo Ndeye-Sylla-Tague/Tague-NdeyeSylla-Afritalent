@@ -2,7 +2,7 @@
 :root {
     --color-primary: #443072;    /* Indigo profond pour les titres */
     --color-secondary: #943de5;  /* Violet vif pour l'action */
-    --color-accent: #cfbbf5;     /* Mauve clair pour les fonds */
+    --color-accent: #ddd4ed;     /* Mauve clair pour les fonds */
     --color-bg: #eceaf1;         /* Fond général du site */
     --color-text: #1a1a1a;       /* Texte sombre */
     --rayon-bordure: 20px;       /* Arrondi des éléments */
@@ -14,10 +14,10 @@
 
 /* Thème Sombre */
 body.dark-mode {
-    --color-primary: #cfbbf5;   /* Plus clair pour contraster sur fond sombre */
-    --color-secondary: #b873ff;
+    --color-primary: #a69bbc;   /* Plus clair pour contraster sur fond sombre */
+    --color-secondary: #553b66;
     --color-accent: #2d2640;    /* Sombre et discret */
-    --color-bg: #1d0f20;        /* Fond noir/gris très foncé */
+    --color-bg: #1d0f20;        /* Fond mauve très foncé */
     --color-text: #eceaf1;      /* Texte clair */
 }
 /* --- MISE À JOUR DU BODY POUR LA TRANSITION --- */
@@ -254,6 +254,29 @@ body.dark-mode .form-select {
 /* 5. Labels (en gris clair pour ne pas fatiguer les yeux) */
 body.dark-mode label {
     color: #d1b3d8 !important;
+}
+/* 1. Fond des questions (le bouton) */
+body.dark-mode .accordion-button {
+    background-color: #2d1832 !important; /* Ton violet sombre */
+    color: #ffffff !important;           /* Texte de la question en blanc */
+}
+
+/* 2. Icône de l'accordéon (la petite flèche) */
+body.dark-mode .accordion-button::after {
+    filter: invert(1); /* Inverse la couleur de l'icône pour qu'elle soit visible */
+}
+
+/* 3. Fond et texte des réponses (le corps de l'accordéon) */
+body.dark-mode .accordion-body {
+    background-color: #1d0f20 !important; /* Ton fond général sombre */
+    color: #d1b3d8 !important;            /* Texte de la réponse en mauve très clair */
+    border: 1px solid #5a3a60 !important;
+}
+
+/* 4. Bordures de l'accordéon */
+body.dark-mode .accordion-item {
+    background-color: transparent !important;
+    border: 1px solid #5a3a60 !important;
 }
 .card {
     background-color: var(--color-bg); /* S'adapte automatiquement au mode sombre */
@@ -929,4 +952,61 @@ body.dark-mode .navbar .nav-link {
     justify-content: center;      /* Centre horizontalement */
     align-items: center;          /* Centre verticalement */
     text-decoration: none;        /* Enlève le soulignement du lien */
+}
+/* Force le texte en blanc dans la carte des 500 (stat-card-primary) */
+.stat-card-primary h2, 
+.stat-card-primary h2 span, 
+.stat-card-primary p {
+    color: #ffffff !important;
+}
+/* État initial : invisible et légèrement décalé */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* État final : visible et à sa place */
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* --- Animation Texte : Slide-up --- */
+.text-animate {
+    opacity: 0;
+    transform: translateY(30px); /* Le texte commence 30px plus bas */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Classe ajoutée par le JavaScript quand l'élément entre dans l'écran */
+.text-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Le texte remonte à sa place initiale */
+}
+/* --- Nouvelle animation : Glissement de la droite vers la gauche --- */
+.text-animate-right {
+    opacity: 0;
+    transform: translateX(50px); /* Le texte commence 50px à droite */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.text-animate-right.is-visible {
+    opacity: 1;
+    transform: translateX(0); /* Le texte revient à sa position d'origine */
+}
+/* --- Effet de glissement fluide depuis la droite --- */
+.text-animate-right {
+    opacity: 0;
+    transform: translateX(100px); /* Commence 100px à droite */
+    transition: all 1.2s ease-out; /* Mouvement fluide sur 1.2 seconde */
+}
+
+/* La classe ajoutée par le JavaScript quand on arrive au titre */
+.text-animate-right.is-visible {
+    opacity: 1;
+    transform: translateX(0); /* Vient se caler à sa position finale */
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Coupe tout ce qui dépasse horizontalement */
 }
