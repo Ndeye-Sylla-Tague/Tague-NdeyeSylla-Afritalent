@@ -54,36 +54,37 @@
             <div class="col-lg-7">
                 <div class="card p-4 p-md-5 border-0 shadow-sm rounded-4 h-100">
                     <h3 class="fw-bold mb-4">Envoyez-nous un message</h3>
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label fw-semibold">Prénom</label>
-                                <input type="text" class="form-control bg-light border-0" placeholder="Moussa" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label fw-semibold">Nom</label>
-                                <input type="text" class="form-control bg-light border-0" placeholder="Ndiaye" required>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Email</label>
-                            <input type="email" class="form-control bg-light border-0" placeholder="moussa@exemple.sn" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold">Sujet</label>
-                            <select class="form-select bg-light border-0">
-                                <option>Recruter un Talent (Entreprise)</option>
-                                <option>Devenir Freelance</option>
-                                <option>Support Technique</option>
-                                <option>Autre</option>
-                            </select>
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label fw-semibold">Votre Message</label>
-                            <textarea class="form-control bg-light border-0" rows="5" placeholder="Dites-nous en plus sur vos besoins..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-afri-custom w-100 py-3 fw-bold">Envoyer le message</button>
-                    </form>
+                <form id="contactForm"> <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-semibold">Prénom</label>
+                        <input type="text" class="form-control bg-light border-0" placeholder="Moussa" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-semibold">Nom</label>
+                        <input type="text" class="form-control bg-light border-0" placeholder="Ndiaye" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Email</label>
+                    <input type="email" id="email" class="form-control bg-light border-0" placeholder="moussa@exemple.sn" required>
+                    <small id="emailError" class="text-danger d-none">Veuillez entrer une adresse email valide.</small>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Sujet</label>
+                    <select class="form-select bg-light border-0">
+                        <option>Recruter un Talent (Entreprise)</option>
+                        <option>Devenir Freelance</option>
+                        <option>Support Technique</option>
+                        <option>Autre</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Votre Message</label>
+                    <textarea id="message" class="form-control bg-light border-0" rows="5" placeholder="Dites-nous en plus sur vos besoins..."></textarea>
+                    <small id="messageError" class="text-danger d-none">Votre message doit contenir au moins 20 caractères.</small>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-3 fw-bold">Envoyer le message</button>
+            </form>
                 </div>
             </div>
 

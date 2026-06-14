@@ -95,3 +95,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach(counter => counterObserver.observe(counter));
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const filters = document.querySelectorAll('.dropdown-item');
+    const cards = document.querySelectorAll('.freelance-card');
+
+    filters.forEach(filter => {
+        filter.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = filter.getAttribute('data-filter');
+
+           cards.forEach(card => {
+    const column = card.parentElement; 
+    
+    if (category === 'all' || card.getAttribute('data-category') === category) {
+        column.classList.remove('d-none'); // On retire la classe qui masque
+    } else {
+        column.classList.add('d-none');    // On ajoute la classe qui masque (d-none = display: none)
+    }
+});
+        });
+    });
+});
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const emailError = document.getElementById('emailError');
+        const messageError = document.getElementById('messageError');
+        
+        let isValid = true;
+
+        // Validation Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            emailError.classList.remove('d-none');
+            isValid = false;
+        } else {
+            emailError.classList.add('d-none');
+        }
+
+        // Validation Message (min 20 caractères)
+        if (message.length < 20) {
+            messageError.classList.remove('d-none');
+            isValid = false;
+        } else {
+            messageError.classList.add('d-none');
+        }
+
+        // Empêcher l'envoi si invalide
+        if (!isValid) {
+            e.preventDefault();
+        } else {
+            alert("Merci ! Votre message a bien été envoyé.");
+        }
+    });
+}
