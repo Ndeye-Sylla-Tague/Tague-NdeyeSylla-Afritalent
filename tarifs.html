@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Encodage et viewport pour garantir la compatibilité mobile -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent - Nos Tarifs</title>
+    
+    <!-- Importation des frameworks et polices pour l'interface et l'identité visuelle -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap" rel="stylesheet">
@@ -11,6 +14,7 @@
 </head>
 <body>
 
+    <!-- NAVBAR : Navigation cohérente sur tout le site avec classe active sur la page courante -->
     <header>
         <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
             <div class="container">
@@ -19,7 +23,7 @@
                     <span class="ms-2" style="font-weight: 800;">AfriTalent</span>
                 </a>
                 <div class="d-flex align-items-center order-lg-2">
-                <button id="theme-toggle" class="btn btn-outline-secondary">🌙</button>
+                    <button id="theme-toggle" class="btn btn-outline-secondary">🌙</button>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -30,17 +34,17 @@
                         <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
                         <li class="nav-item"><a class="nav-link active" href="tarifs.html">Tarifs</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-                         <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <a href="#" class="btn btn-primary ms-lg-3 fw-bold">Rejoindre AfriTalent</a>
+                    <a href="contact.html" class="btn btn-primary ms-lg-3 fw-bold">Rejoindre AfriTalent</a>
                 </div>
             </div>
-            
         </nav>
     </header>
 
     <main class="py-5 mt-5">
+        <!-- HEADER DE PAGE : Introduction simple et directe pour guider l'utilisateur -->
         <section class="text-center py-5">
             <div class="container">
                 <h1 class="display-4 fw-bold text-animate text-dark">Des tarifs simples et <span class="text-afri">transparents</span></h1>
@@ -48,11 +52,13 @@
             </div>
         </section>
 
+        <!-- SECTION TARIFICATION : Grille de comparaison des offres -->
         <section class="container py-4">
             <div class="row g-4 justify-content-center">
+                <!-- Plan Gratuit : Entrée de gamme -->
                 <div class="col-12 col-md-4">
                     <div class="card h-100 p-4 shadow-sm border-0">
-                        <h5 class="text-uppercase text-muted">Gratuité</h5>
+                        <h2 class="text-uppercase text-muted">Gratuite</h2>
                         <h2 class="my-3">0 <span class="fs-6 text-muted">FCFA</span></h2>
                         <p>Parfait pour commencer</p>
                         <ul class="list-unstyled my-4">
@@ -64,30 +70,32 @@
                     </div>
                 </div>
 
+                <!-- Plan Business : Offre mise en avant (effet visuel renforcé) -->
                 <div class="col">
-                <div class="card h-100 border-afri border-2 shadow-lg rounded-4 text-center">
-                    <div class="card-header bg-afri-secondary text-white border-0 py-3">
-                        <small class="fw-bold">RECOMMANDÉ</small>
-                        <h5 class="fw-bold mb-0">BUSINESS</h5>
-                    </div>
-                    <div class="card-body">
-                        <h2 class="display-4 fw-bold text-primary">25.000 <small class="fs-6 text-muted">/mois</small></h2>
-                        <p class="text-muted small mb-4">Pour les recruteurs actifs</p>
-                        <ul class="list-unstyled text-start px-3 mb-4">
-                            <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Annonces illimitées</li>
-                            <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Support WhatsApp 24/7</li>
-                            <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Commission réduite (8%)</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0 pb-4">
-                        <button class="btn btn-primary w-100 py-2 fw-bold rounded-pill shadow">Choisir Business</button>
+                    <div class="card h-100 border-afri border-2 shadow-lg rounded-4 text-center">
+                        <div class="card-header bg-afri-secondary text-white border-0 py-3">
+                            <small class="fw-bold">RECOMMANDÉ</small>
+                            <h2 class="fw-bold mb-0">BUSINESS</h2>
+                        </div>
+                        <div class="card-body">
+                            <h2 class="display-4 fw-bold text-primary">25.000 <small class="fs-6 text-muted">/mois</small></h2>
+                            <p class="text-muted small mb-4">Pour les recruteurs actifs</p>
+                            <ul class="list-unstyled text-start px-3 mb-4">
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Annonces illimitées</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Support WhatsApp 24/7</li>
+                                <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> Commission réduite (8%)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-4">
+                            <button class="btn btn-primary w-100 py-2 fw-bold rounded-pill shadow">Choisir Business</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+                <!-- Plan Entreprise : Approche personnalisée sur devis -->
                 <div class="col-12 col-md-4">
                     <div class="card h-100 p-4 shadow-sm border-0">
-                        <h5 class="text-uppercase text-muted">Entreprise</h5>
+                        <h2 class="text-uppercase text-muted">Entreprise</h2>
                         <h2 class="my-3">Devis</h2>
                         <p>Solutions sur-mesure</p>
                         <ul class="list-unstyled my-4">
@@ -101,127 +109,128 @@
             </div>
         </section>
 
+        <!-- SECTION GARANTIE : Renforcement de la confiance utilisateur -->
         <section class="container py-5">
-        
-<div class="mt-5 p-4 bg-white rounded-4 shadow-sm border">
-            <div class="row align-items-center text-center text-md-start">
-                <div class="col-md-8">
-                    <h5 class="fw-bold mb-1">Satisfait ou remboursé</h5>
-                    <p class="text-muted mb-0">Si aucun freelance ne correspond à votre besoin après 7 jours, nous vous remboursons intégralement l'abonnement.</p>
-                </div>
-                <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                    <i class="bi bi-shield-fill-check text-success display-4"></i>
+            <div class="mt-5 p-4 bg-white rounded-4 shadow-sm border">
+                <div class="row align-items-center text-center text-md-start">
+                    <div class="col-md-8">
+                        <h1 class="fw-bold mb-1">Satisfait ou remboursé</h1>
+                        <p class="text-muted mb-0">Si aucun freelance ne correspond à votre besoin après 7 jours, nous vous remboursons intégralement l'abonnement.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <i class="bi bi-shield-fill-check text-success display-4"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
  
-    <section class="py-5 fade-in bg-white border-top">
-    <div class="container py-4">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Questions Fréquemment Posées</h2>
-            <p class="text-muted">Tout ce que vous devez savoir sur nos tarifs et services.</p>
-        </div>
+        <!-- SECTION FAQ : Accordéon utilisant l'ID faq-section pour la navigation interne -->
+        <section class="py-5 fade-in bg-white border-top" id="faq-section">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Questions Fréquemment Posées</h2>
+                    <p class="text-muted">Tout ce que vous devez savoir sur nos tarifs et services.</p>
+                </div>
 
-        <div class="row justify-content-center">
-            <div class="col-md-9">
-                <div class="accordion accordion-flush shadow-sm border rounded-4 overflow-hidden" id="accordionFAQ">
-                    
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                01. Comment se font les paiements ?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Nous acceptons les paiements locaux via <strong>Orange Money, Wave, Free Money</strong>, ainsi que les cartes bancaires internationales (Visa/Mastercard).
+                <div class="row justify-content-center">
+                    <div class="col-md-9">
+                        <div class="accordion accordion-flush shadow-sm border rounded-4 overflow-hidden" id="accordionFAQ">
+                            <!-- Bloc Accordéon : Utilisation de data-bs-target pour le toggle -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        01. Comment se font les paiements ?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-muted">
+                                        Nous acceptons les paiements locaux via <strong>Orange Money, Wave, Free Money</strong>, ainsi que les cartes bancaires internationales (Visa/Mastercard).
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Répétition des éléments d'accordéon -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        02. Mon argent est-il sécurisé ?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-muted">
+                                        Oui. AfriTalent utilise un système de séquestre : l'argent est bloqué sur la plateforme et n'est versé au freelance que lorsque vous validez le travail final.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        03. Y a-t-il des frais cachés ?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-muted">
+                                        Aucun. Les tarifs affichés incluent les frais de mise en relation. Seuls les frais de transaction de votre opérateur mobile peuvent s'appliquer.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                        04. Puis-je annuler une mission en cours ?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-muted">
+                                        Oui, en cas de litige ou de non-respect du cahier des charges, vous pouvez demander une médiation. Si le freelance n'a pas livré, vous êtes intégralement remboursé.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                        05. Les freelances sont-ils vraiment vérifiés ?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-muted">
+                                        Absolument. Chaque talent passe un entretien technique et nous vérifions leurs références ainsi que leurs pièces d'identité avant validation du profil.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                        06. Quelle est la différence entre le plan Starter et Business ?
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                    <div class="accordion-body text-muted">
+                                        Le plan Business vous offre un support prioritaire 24/7 et réduit notre commission sur les projets de 15% à seulement 8%.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                02. Mon argent est-il sécurisé ?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Oui. AfriTalent utilise un système de séquestre : l'argent est bloqué sur la plateforme et n'est versé au freelance que lorsque vous validez le travail final.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                                03. Y a-t-il des frais cachés ?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Aucun. Les tarifs affichés incluent les frais de mise en relation. Seuls les frais de transaction de votre opérateur mobile peuvent s'appliquer.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                                04. Puis-je annuler une mission en cours ?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Oui, en cas de litige ou de non-respect du cahier des charges, vous pouvez demander une médiation. Si le freelance n'a pas livré, vous êtes intégralement remboursé.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                                05. Les freelances sont-ils vraiment vérifiés ?
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Absolument. Chaque talent passe un entretien technique et nous vérifions leurs références ainsi que leurs pièces d'identité avant validation du profil.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
-                                06. Quelle est la différence entre le plan Starter et Business ?
-                            </button>
-                        </h2>
-                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body text-muted">
-                                Le plan Business vous offre un support prioritaire 24/7 et réduit notre commission sur les projets de 15% à seulement 8%.
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-</main>
+        </section>
+    </main>
 
-<footer class="footer-section py-5">
+    <!-- FOOTER : Liens de navigation et informations de contact -->
+         <footer class="footer-section py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-4">
-                <h4 class="mb-3">AfriTalent</h4>
+                <div class="footer-brand-header d-flex align-items-center mb-3">
+                    <div class="brand-logo-img me-2"></div>
+                    <h4 class="mb-0 text-white">AfriTalent</h4>
+                </div>
                 <p>La plateforme de référence pour connecter les meilleurs talents freelances en Afrique avec des entreprises du monde entier.</p>
                 <div class="social-icons mt-3">
-                    <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white"><i class="bi bi-twitter-x" style="font-size: 1.5rem;"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-instagram social-icon-size"></i></a>
                 </div>
             </div>
 
@@ -230,7 +239,7 @@
                 <ul class="list-unstyled">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="freelances.html">Trouver un Freelance</a></li>
-                    <li><a href="#">Offres d'Emploi</a></li>
+                    <li><a href="freelances.html">Offres d'Emploi</a></li>
                     <li><a href="index.html#how-it-works">Comment ça marche</a></li>
                 </ul>
             </div>
@@ -239,8 +248,8 @@
                 <h5 class="mb-3">Ressources</h5>
                 <ul class="list-unstyled">
                     <li><a href="index.html#testimonials">Blog</a></li>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Tutoriels</a></li>
+                    <li><a href="tarifs.html#faq-section">Centre d'aide</a></li>
+                    <li><a href="about.html#">Tutoriels</a></li>
                 </ul>
             </div>
 
@@ -255,7 +264,7 @@
         </div>
 
         <div class="text-center pt-4 mt-4 border-top border-light">
-            <p class="mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p>
+            <p class="mb-0">&copy; <span id="current-year"></span> AfriTalent. Tous droits réservés.</p>
         </div>
     </div>
     <a href="#" id="back-to-top" class="btn btn-primary" title="Retour en haut">
@@ -264,6 +273,7 @@
 </footer>
 
 
+    <!-- Importation des scripts JS de Bootstrap et du script personnalisé pour l'interactivité -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

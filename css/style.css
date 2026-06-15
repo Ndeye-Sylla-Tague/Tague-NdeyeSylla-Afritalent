@@ -10,7 +10,7 @@
     --font-body: 'Inter', sans-serif;
 }
 
-/* --- AJOUT POUR LE DARK MODE (À mettre après ton :root actuel) --- */
+/* --- AJOUT POUR LE DARK MODE (À mettre après le :root actuel) --- */
 
 /* Thème Sombre */
 body.dark-mode {
@@ -27,7 +27,7 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
-    /* Ajoute cette ligne pour une transition fluide quand tu bascules le mode */
+    /* Ajout de cette ligne pour une transition fluide quand tu bascules le mode */
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 /* 1. Navbar : Adaptation intelligente */
@@ -39,7 +39,7 @@ body.dark-mode .navbar {
 body.dark-mode .bento-card, 
 body.dark-mode .step-card,
 body.dark-mode .card {
-    background-color: #1e1e1e !important; /* Fond sombre pour les cartes */
+    background-color: #2d2c2c !important; /* Fond sombre pour les cartes */
     border: 1px solid #333 !important;
 }
 
@@ -47,7 +47,7 @@ body.dark-mode .card {
 body.dark-mode .bento-card h3,
 body.dark-mode .bento-card p,
 body.dark-mode .card-text {
-    color: var(--color-text) !important; /* Utilise la variable dark-mode définie dans ton :root */
+    color: var(--color-text) !important; /* Utilise la variable dark-mode définie dans le :root */
 }
 
 /* 4. Lien actif : On protège le mauve peu importe le mode */
@@ -59,7 +59,7 @@ body.dark-mode .card-text {
 body.dark-mode .stat-card,
 body.dark-mode .stat-card-light,
 body.dark-mode .bento-card {
-    background-color: #1e1e1e !important; /* Fond sombre */
+    background-color: #2d2c2c !important; /* Fond sombre */
     border: 1px solid #333 !important;
 }
 
@@ -73,7 +73,7 @@ body.dark-mode .stat-card p {
 /* --- Adaptation des témoignages pour le mode sombre --- */
 /* --- Correction pour le Dark Mode : Cible bien la classe .testimonial-card --- */
 body.dark-mode .testimonial-card {
-    background-color: #1e1e1e !important; 
+    background-color: #2c2a2a !important; 
     border: 1px solid #333 !important;
     padding: 20px; /* Ajoute un peu d'espace si besoin */
     border-radius: 10px;
@@ -88,7 +88,7 @@ body.dark-mode .testimonial-card .role {
 
 /* Correction pour le bouton CTA qui est juste après */
 body.dark-mode .cta-section {
-    background-color: #121212 !important;
+    background-color: #1e1d1d !important;
 }
 
 body.dark-mode .cta-title {
@@ -169,7 +169,7 @@ body.dark-mode .card-footer {
 
 /* 1. Fond de la section */
 body.dark-mode section.py-5.bg-white {
-    background-color: #121212 !important;
+    background-color: #321b35 !important;
 }
 
 /* 2. Fond des cartes feature-card */
@@ -219,7 +219,7 @@ body.dark-mode .card .text-muted {
 body.dark-mode h3 {
     color: #ffffff !important;
 }
-/* --- Mode Sombre avec ta couleur #1d0f20 --- */
+/* --- Mode Sombre avec la couleur #1d0f20 --- */
 
 /* 1. Fond général de la page */
 body.dark-mode, 
@@ -257,7 +257,7 @@ body.dark-mode label {
 }
 /* 1. Fond des questions (le bouton) */
 body.dark-mode .accordion-button {
-    background-color: #2d1832 !important; /* Ton violet sombre */
+    background-color: #2d1832 !important; /* le violet sombre */
     color: #ffffff !important;           /* Texte de la question en blanc */
 }
 
@@ -268,7 +268,7 @@ body.dark-mode .accordion-button::after {
 
 /* 3. Fond et texte des réponses (le corps de l'accordéon) */
 body.dark-mode .accordion-body {
-    background-color: #1d0f20 !important; /* Ton fond général sombre */
+    background-color: #1d0f20 !important; /* le fond général sombre */
     color: #d1b3d8 !important;            /* Texte de la réponse en mauve très clair */
     border: 1px solid #5a3a60 !important;
 }
@@ -416,11 +416,12 @@ h2 {
         flex-direction: column;
     }
 }
-/* --- 8. SECTION & CONTENU --- */
+/* --- 8. SECTION & CONTENU --- *//*contact*/
 main {
     max-width: 1200px;
     margin: auto;
     padding: 80px 20px;
+    background-color: #f8f9fa;
 }
 
 .card-section {
@@ -538,7 +539,7 @@ h1.display-2 {
 .step-number {
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--color-primary); /* Ton indigo */
+    color: var(--color-primary); /* le indigo */
     opacity: 0.3; /* Effet de style léger */
     margin-bottom: 10px;
 }
@@ -584,7 +585,7 @@ h1.display-2 {
 /* 1. On donne au conteneur parent une position relative */
 .step-card {
     position: relative; /* Indispensable pour que l'icône se place par rapport à la carte */
-    /* ... tes autres styles existants (taille, background, etc.) restent inchangés ... */
+    /* ... mes autres styles existants (taille, background, etc.) restent inchangés ... */
 }
 
 /* 2. On positionne l'icône tout à droite */
@@ -600,7 +601,6 @@ h1.display-2 {
     margin-bottom: 10px;
     /* ... garde tes styles actuels pour .step-number ... */
 }
-/* Container de la carte témoignage */
 /* Container de la carte témoignage */
 .testimonial-card {
     text-align: center;
@@ -660,7 +660,6 @@ h1.display-2 {
     font-size: 1.2rem;
     line-height: 1.6; /* Améliore le confort de lecture */
     color: #555;
-    
 }
 
 /* Rend les flèches noires pour être visibles sur fond blanc */
@@ -681,7 +680,7 @@ h1.display-2 {
     opacity: 1;
 }
 .cta-section {
-    background-color: var(--color-primary); /* Ton Indigo profond */
+    background-color: var(--color-primary); /* mon Indigo profond */
     color: white;
     padding: 60px 0;
     border-radius: var(--rayon-bordure); /* Arrondi pour rester cohérent */
@@ -720,7 +719,7 @@ h1.display-2 {
     transform: scale(1.05); /* Petit effet de zoom */
 }
 .footer-section {
-    background-color: var(--color-primary); /* Ton Indigo */
+    background-color: var(--color-primary); /* mon Indigo */
     color: white;
     border-top-left-radius: var(--rayon-bordure);
     border-top-right-radius: var(--rayon-bordure);
@@ -772,7 +771,6 @@ h1.display-2 {
     border-radius: 20px !important;
 }
 
-/* Ajustement pour que l'en-tête bleu soit bien intégré */
 .card {
     border-radius: 20px !important;
 }
@@ -1006,8 +1004,104 @@ body.dark-mode .navbar .nav-link {
 .text-animate-right.is-visible {
     opacity: 1;
     transform: translateX(0); /* Vient se caler à sa position finale */
-}
-html, body {
+}html, body {
     width: 100%;
     overflow-x: hidden; /* Coupe tout ce qui dépasse horizontalement */
+}
+.hidden {
+    opacity: 0;
+    transform: scale(0.8); /* Commence petit */
+    transition: all 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: scale(1); /* Revient à sa taille normale */
+}
+/* Style pour le texte de la marque (remplace le style="font-weight: 800;") */
+.brand-text {
+    font-weight: 800;
+}
+
+/* Style pour les icônes du footer (remplace le style="font-size: 1.5rem;") */
+.social-icon-size {
+    font-size: 1.5rem;
+}
+
+/* Optionnel : Si tu veux gérer le style du bouton thème proprement */
+#theme-toggle {
+    border-color: #6c757d; /* Correspond au btn-outline-secondary */
+}
+/* Assure l'alignement du logo et du titre dans le footer */
+.footer-brand-header {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* S'assure que le logo ne se déforme pas */
+.footer-brand-header .brand-logo-img {
+    flex-shrink: 0;
+    width: 40px !important;
+    height: 40px !important;
+}
+/* formulaire de contact*/
+/* Bordures dynamiques */
+.is-invalid {
+    border: 2px solid #dc3545 !important;
+}
+
+.is-valid {
+    border: 2px solid #198754 !important;
+}
+
+/* On cache les messages par défaut */
+.error-text {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+}
+/* Conteneur principal qui force l'horizontalité */
+.horizontal-scroll-container {
+    display: flex;                /* Aligne tout en ligne */
+    overflow-x: auto;            /* Active le défilement si le contenu dépasse */
+    gap: 20px;                   /* Espace entre tes cartes */
+    padding-bottom: 20px;        /* Espace pour la barre de défilement */
+    scroll-snap-type: x mandatory; /* Rend le défilement plus fluide (snap) */
+}
+
+/* On force une largeur fixe pour les cartes pour qu'elles ne s'écrasent pas */
+.horizontal-scroll-container .feature-card {
+    min-width: 300px;            /* Largeur minimale de chaque carte */
+    scroll-snap-align: start;    /* "Aimante" les cartes au début du conteneur */
+}
+
+/* Optionnel : cacher la barre de défilement (Chrome/Safari) */
+.horizontal-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+}
+.horizontal-scroll-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 20px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch; /* Pour un scroll fluide sur mobile */
+}
+.horizontal-scroll-container .feature-card {
+    min-width: 250px; /* Plus c'est petit, plus tes cartes sont "serrées" */
+    max-width: 250px; /* Ajoute ceci pour forcer une taille fixe */
+    flex: 0 0 auto;
+}
+.feature-card {
+    padding: 15px !important; /* Réduit l'espace interne */
+}
+
+.feature-card h4 {
+    font-size: 1.1rem !important; /* Titre plus petit */
 }

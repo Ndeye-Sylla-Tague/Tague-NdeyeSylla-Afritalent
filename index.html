@@ -4,28 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent - Accueil</title>
-    
+    <!-- Intégration de Bootstrap 5 et Bootstrap Icons pour le design responsive et les icônes -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Polices Google Fonts pour une identité visuelle moderne -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-            <!-- Navbar -->
+            <!-- NAVBAR : Fixée en haut pour une navigation permanente -->
     <header>
         <nav class="navbar navbar-expand-lg  fixed-top">
            <div class="container">
+            <!-- Logo et nom de la marque -->
            <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="images/africa.png" alt="AfriTalent Logo" class="brand-logo-img">
                 <span style="font-weight: 800; ">AfriTalent</span>
             </a>
+            <!-- Toggle du mode sombre et menu burger pour mobile -->
                         <div class="d-flex align-items-center order-lg-2">
                 <button id="theme-toggle" class="btn btn-outline-secondary">🌙</button>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+                    <!-- Liens de navigation -->
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
@@ -35,12 +38,12 @@
                         <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <a href="#" class="btn btn-primary ms-lg-3 fw-bold">Rejoindre AfriTalent</a>
+                    <a href="contact.html" class="btn btn-primary ms-lg-3 fw-bold">Rejoindre AfriTalent</a>
                 </div>
             </div>
         </nav>
     </header>
-            <!-- Section Hero -->
+            <!-- SECTION HERO : Accroche principale avec une mise en page bi-colonne  -->
     <main>
    <section id="hero" class="d-flex align-items-center py-5">
     <div class="container">
@@ -48,7 +51,7 @@
             <div class="col-lg-6">
                 <h1 class="display-2 fw-bold text-animate-right">L'excellence du freelancing africain</h1>
                 <p class="lead my-4 text-secondary">La plateforme qui connecte les entreprises aux meilleurs talents du continent pour des résultats exceptionnels. Connectez-vous avec des talents qualifiés pour vos projets technologiques et créatifs. Simple, rapide et sécurisé.</p>
-                
+                <!-- Barre de recherche rapide -->
                 <div class="mb-4">
                     <input type="text" class="form-control mb-2" placeholder="Ex: Développeur Web, UI/UX Designer...">
                    <button class="btn btn-primary rounded-pill px-4 py-1 fw-bold">Rechercher</button>
@@ -56,18 +59,21 @@
 
                 <div class="d-flex gap-3">
                     <a href="freelances.html" class="btn-afri btn-afri-outline">Je suis freelance</a>
-                    <a href="freelances.html" class="btn-afri btn-afri-primary">Je cherche un freelanc</a>
+                    <a href="freelances.html" class="btn-afri btn-afri-primary">Je cherche un freelance</a>
                 </div>
             </div>
+            <!-- Image visuelle avec effet d'ombre et bordures arrondies -->
             <div class="col-lg-6 ms-auto">
                 <img src="images/image2.jpg" alt="Image de bienvenue AfriTalent" class="img-fluid rounded-4 shadow-lg tilt-image">
             </div>
         </div>
     </div>
 </section>
-<!--les chiffres-->
+                <!-- SECTION STATISTIQUES : Mise en avant de la croissance de la plateforme avec compteurs JS -->
     <section id="stats" class="py-5">
     <div class="container">
+         <h2 class="text-center mb-4">Statistiques</h2>
+
         <div class="stats-grid">
             <div class="stat-card">
                 <h2>+<span class="counter" data-target="2500">0</span></h2>
@@ -84,10 +90,11 @@
         </div>
     </div>
 </section>
-            <!--Nos categories-->
+            <!-- SECTION CATEGORIES : Utilisation d'une "Bento Grid" pour une navigation moderne par domaine -->
             <section id="services" class="py-5 fade-in">
     <div class="container text-center">
         <h2 class="text-center mb-5">Nos catégories de services</h2>
+        <!-- Chaque carte représente un domaine d'expertise spécifique -->
         <p class="text-center mb-4">Explorez les talents experts par domaine d'activité.</p>
             <div class="bento-grid">
             <div class="bento-card">
@@ -134,7 +141,7 @@
         </div>
         </div>
 </section>
-            <!--Comment ça marche-->
+            <!--Comment ça marche--><!-- SECTION PROCESSUS : Guide utilisateur pas-à-pas -->
     <section id="how-it-works" class="py-5 fade-in">
     <div class="container">
         <h2 class="text-center mb-5">Comment ça marche ?</h2>
@@ -170,7 +177,7 @@
         </div>
     </div>
 </section>
-                <!--Temoins-->
+               <!-- SECTION TEMOIGNAGES : Carrousel Bootstrap pour renforcer la preuve sociale -->
    <section id="testimonials" class="py-5">
     <h2 class="text-center mb-5">Ce que disent nos clients</h2>
     
@@ -280,7 +287,7 @@
     </div>
 </section>
 
-            <!--CTA-->
+           <!-- CALL TO ACTION FINAL : Incitation à l'action pour convertir les visiteurs -->
        <section class="py-5 cta-section text-center">
     <div class="container">
         <h2 class="display-5 fw-bold cta-title">Prêt à propulser votre carrière ?</h2>
@@ -290,17 +297,21 @@
 </section>
 
 </main>
-            <!-- Foter-->
+           <!-- FOOTER : Liens de navigation, réseaux sociaux et mentions légales -->
     <footer class="footer-section py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-4">
-                <h4 class="mb-3">AfriTalent</h4>
+                <div class="footer-brand-header d-flex align-items-center mb-3">
+                    <div class="brand-logo-img me-2"></div>
+                    <h4 class="mb-0 text-white">AfriTalent</h4>
+                </div>
                 <p>La plateforme de référence pour connecter les meilleurs talents freelances en Afrique avec des entreprises du monde entier.</p>
                 <div class="social-icons mt-3">
-                    <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white"><i class="bi bi-twitter-x" style="font-size: 1.5rem;"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-instagram social-icon-size"></i></a>
                 </div>
             </div>
 
@@ -309,7 +320,7 @@
                 <ul class="list-unstyled">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="freelances.html">Trouver un Freelance</a></li>
-                    <li><a href="#">Offres d'Emploi</a></li>
+                    <li><a href="freelances.html">Offres d'Emploi</a></li>
                     <li><a href="index.html#how-it-works">Comment ça marche</a></li>
                 </ul>
             </div>
@@ -318,8 +329,8 @@
                 <h5 class="mb-3">Ressources</h5>
                 <ul class="list-unstyled">
                     <li><a href="index.html#testimonials">Blog</a></li>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Tutoriels</a></li>
+                    <li><a href="tarifs.html#faq-section">Centre d'aide</a></li>
+                    <li><a href="about.html#">Tutoriels</a></li>
                 </ul>
             </div>
 
@@ -334,7 +345,7 @@
         </div>
 
         <div class="text-center pt-4 mt-4 border-top border-light">
-            <p class="mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p>
+            <p class="mb-0">&copy; <span id="current-year"></span> AfriTalent. Tous droits réservés.</p>
         </div>
     </div>
     <a href="#" id="back-to-top" class="btn btn-primary" title="Retour en haut">
@@ -342,8 +353,9 @@
 </a>
 </footer>
 
+<!-- Scripts pour l'interactivité et les animations -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
     <script src="js/main.js"></script>  
-
+    
 </body>
 </html>

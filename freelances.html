@@ -35,7 +35,7 @@
                         <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <a href="#" class="btn btn-primary ms-lg-3 fw-bold">Rejoindre AfriTalent</a>
+                    <a href="contact.html" class="btn btn-primary ms-lg-3 fw-bold">Rejoindre AfriTalent</a>
                 </div>
             </div>
         </nav>
@@ -72,12 +72,12 @@
         </div>
     </div>
 </section>
-
+            <!-- Nos experts -->
 <section id="freelance-list" class="py-5">
     <div class="container">
         <div class="row g-4">
             
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
                 <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="dev">
                     <img src="images/MouhamedDiop.jpg" alt="Mouhamed Diop" class="img-fluid rounded mb-2">
                     <span class="badge bg-success">Disponible</span>
@@ -91,7 +91,7 @@
                 
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
                 <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="design">
                     <img src="images/VeronicaMedy.jpg" alt="Veronica Medy" class="img-fluid rounded mb-2">
                     <span class="badge bg-success">Disponible</span>
@@ -104,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
                 <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="marketing">
                     <img src="images/LalaAicha.jpg" alt="Lala Aicha Thiam" class="img-fluid rounded mb-2">
                     <span class="badge bg-warning">En mission</span>
@@ -117,7 +117,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
                 <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="redaction">
                     <img src="images/FatouNdiaye.jpg" alt="Fatou Ndiaye" class="img-fluid rounded mb-2">
                     <span class="badge bg-success">Disponible</span>
@@ -130,7 +130,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
                 <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="data">
                     <img src="images/IbrahimaSall.jpg" alt="Ibrahim Sall" class="img-fluid rounded mb-2">
                     <span class="badge bg-success">Disponible</span>
@@ -143,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
                 <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="media">
                     <img src="images/AbdouDiouf.jpg" alt="Abdou Diouf" class="img-fluid rounded mb-2">
                     <span class="badge bg-success">Disponible</span>
@@ -156,8 +156,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="freelance-card h-100 p-3 border rounded shadow-sm"data-category="moteur">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
+                <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="moteur">
                     <img src="images/OusmaneSy.jpg" alt="Ousmane Sy" class="img-fluid rounded mb-2">
                     <span class="badge bg-success">Disponible</span>
                     <h3>Ousmane Sy</h3>
@@ -169,7 +169,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
                 <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="cyber">
                     <img src="images/KhadyFall.jpg" alt="Khady Fall" class="img-fluid rounded mb-2">
                     <span class="badge bg-warning">En mission</span>
@@ -182,7 +182,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 hidden">
                 <div class="freelance-card h-100 p-3 border rounded shadow-sm" data-category="commerce">
                     <img src="images/MmadouBa.jpg" alt="Mamadou Ba" class="img-fluid rounded mb-2">
                     <span class="badge bg-success">Disponible</span>
@@ -200,16 +200,21 @@
 </section>
     </main>
 
-  <footer class="footer-section py-5">
+  <!-- FOOTER : Liens de navigation, réseaux sociaux et mentions légales -->
+     <footer class="footer-section py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-4">
-                <h4 class="mb-3">AfriTalent</h4>
+                <div class="footer-brand-header d-flex align-items-center mb-3">
+                    <div class="brand-logo-img me-2"></div>
+                    <h4 class="mb-0 text-white">AfriTalent</h4>
+                </div>
                 <p>La plateforme de référence pour connecter les meilleurs talents freelances en Afrique avec des entreprises du monde entier.</p>
                 <div class="social-icons mt-3">
-                    <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
-                    <a href="#" class="text-white"><i class="bi bi-twitter-x" style="font-size: 1.5rem;"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-white me-3"><i class="bi bi-instagram social-icon-size"></i></a>
                 </div>
             </div>
 
@@ -218,7 +223,7 @@
                 <ul class="list-unstyled">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="freelances.html">Trouver un Freelance</a></li>
-                    <li><a href="#">Offres d'Emploi</a></li>
+                    <li><a href="freelances.html">Offres d'Emploi</a></li>
                     <li><a href="index.html#how-it-works">Comment ça marche</a></li>
                 </ul>
             </div>
@@ -227,8 +232,8 @@
                 <h5 class="mb-3">Ressources</h5>
                 <ul class="list-unstyled">
                     <li><a href="index.html#testimonials">Blog</a></li>
-                    <li><a href="#">Centre d'aide</a></li>
-                    <li><a href="#">Tutoriels</a></li>
+                    <li><a href="tarifs.html#faq-section">Centre d'aide</a></li>
+                    <li><a href="about.html#">Tutoriels</a></li>
                 </ul>
             </div>
 
@@ -243,7 +248,7 @@
         </div>
 
         <div class="text-center pt-4 mt-4 border-top border-light">
-            <p class="mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p>
+            <p class="mb-0">&copy; <span id="current-year"></span> AfriTalent. Tous droits réservés.</p>
         </div>
     </div>
     <a href="#" id="back-to-top" class="btn btn-primary" title="Retour en haut">
