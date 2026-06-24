@@ -20,6 +20,37 @@ body.dark-mode {
     --color-bg: #1d0f20;        /* Fond mauve très foncé */
     --color-text: #eceaf1;      /* Texte clair */
 }
+:root {
+    --color-primary: #443072;
+    --color-secondary: #943de5;
+}
+
+.text-gradient {
+    /* 1. Dégradé */
+    background: linear-gradient(90deg, #443072, #943de5);
+    
+    /* 2. On force le découpage (Le préfixe -webkit- est crucial) */
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    
+    /* 3. On rend le texte transparent pour voir le fond */
+    color: transparent !important;
+    
+    /* 4. On force l'élément à se comporter comme un bloc de texte */
+    display: inline-block !important;
+    
+    /* 5. C'est ici le secret : on réinitialise l'image de fond */
+    -webkit-text-fill-color: transparent !important;
+}
+.text-gradient {
+    line-height: 1.2 !important; /* Parfois nécessaire pour le clipping */
+}
+.text-gradient {
+    /* ... tes propriétés précédentes ... */
+    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.1));
+    /* Exemple plus contrasté en gardant tes tons */
+background: linear-gradient(90deg, #443072, #c387fc);
+}
 /* --- MISE À JOUR DU BODY POUR LA TRANSITION --- */
 body {
     font-family: var(--font-body);
@@ -302,7 +333,7 @@ body {
 
 /* --- 4. TYPOGRAPHIE --- */
  h2, h3 {
-    font-family: var(--font-heading);
+    font-family: var(--font-heading);                                       
     color: var(--color-primary);
     margin-bottom: 1rem;
 }
@@ -416,14 +447,13 @@ h2 {
         flex-direction: column;
     }
 }
-/* --- 8. SECTION & CONTENU --- *//*contact*/
+/* --- 8. SECTION & CONTENU --- */
 main {
     max-width: 1200px;
     margin: auto;
     padding: 80px 20px;
-    background-color: #f8f9fa;
+    
 }
-
 .card-section {
     background-color: var(--color-accent);
     padding: 30px;
@@ -453,6 +483,7 @@ img {
     display: flex;
     align-items: center;
     padding: 100px 0;
+    font-weight: 800;
 }
 .hero img {
     max-width: 100%; /* L'image s'adapte à la taille de sa colonne */
@@ -907,7 +938,7 @@ body {
 /* Classe qui sera ajoutée par JS au scroll */
 .navbar.scrolled {
     padding: 10px 0; /* Effet "shrink" (rétrécissement) */
-    background-color: #1d0f20 !important; /* Ta couleur sombre */
+    background-color: #ddd4ed !important; /* Ta couleur sombre */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ajout de l'ombre */
 }
 /* 1. Couleur des liens en MODE CLAIR (par défaut) */
@@ -1094,8 +1125,8 @@ body.dark-mode .navbar .nav-link {
     -webkit-overflow-scrolling: touch; /* Pour un scroll fluide sur mobile */
 }
 .horizontal-scroll-container .feature-card {
-    min-width: 250px; /* Plus c'est petit, plus tes cartes sont "serrées" */
-    max-width: 250px; /* Ajoute ceci pour forcer une taille fixe */
+    min-width: 250px; /* Plus c'est petit, plus les cartes sont "serrées" */
+    max-width: 250px; /* On ajoute ceci pour forcer une taille fixe */
     flex: 0 0 auto;
 }
 .feature-card {

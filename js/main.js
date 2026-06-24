@@ -160,7 +160,7 @@ if (contactForm) {
 
         // Si tout est valide, on simule l'envoi
         if (isValid) {
-            alert("Merci ! Votre message a bien été envoyé.");
+            ("Merci ! Votre message a bien été envoyé.");
             contactForm.reset(); // Réinitialise le formulaire
             // Enlève les bordures vertes après envoi
             emailField.classList.remove('is-valid');
@@ -168,7 +168,6 @@ if (contactForm) {
         }
     });
 }
-
 // --- 7. Animation générale (Reveal scroll) ---
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
